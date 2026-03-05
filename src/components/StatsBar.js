@@ -17,7 +17,7 @@ export default function StatsBar({ program }) {
     <div className="flex overflow-x-auto scrollbar-none border-b border-border bg-obsidian">
       {stats.map((stat, i) => (
         <div key={i} className="flex-shrink-0 px-4 py-2.5 border-r border-border last:border-r-0">
-          <div className="font-mono text-[7px] tracking-[3px] text-iron uppercase">
+          <div className="font-mono text-[7px] tracking-[3px] text-cream-dim uppercase">
             {stat.key}
           </div>
           <div className={`font-display text-[15px] tracking-wide whitespace-nowrap ${stat.gold ? 'text-gold' : 'text-cream'}`}>

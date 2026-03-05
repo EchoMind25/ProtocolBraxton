@@ -5,7 +5,7 @@ const TYPE_COLORS = {
   push: 'text-push',
   pull: 'text-pull',
   legs: 'text-legs',
-  rest: 'text-iron',
+  rest: 'text-cream-dim',
   combat: 'text-legs',
 };
 
@@ -14,7 +14,7 @@ export default function DayNav({ days, activeDay, onDayChange }) {
     <div className="grid grid-cols-7 border-b border-border bg-stone-900">
       {days.map((day) => {
         const active = activeDay === day.id;
-        const colorClass = TYPE_COLORS[day.day_type] || 'text-iron';
+        const colorClass = TYPE_COLORS[day.day_type] || 'text-cream-dim';
         return (
           <button
             key={day.id}

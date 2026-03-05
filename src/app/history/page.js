@@ -75,7 +75,7 @@ export default function HistoryPage() {
           <h1 className="font-display text-xl tracking-[5px] text-cream uppercase">
             Training <span className="text-gold">History</span>
           </h1>
-          <p className="text-sm text-iron mt-1">
+          <p className="text-sm text-cream-dim mt-1">
             {sessions.length} sessions logged
           </p>
         </div>
@@ -86,7 +86,7 @@ export default function HistoryPage() {
           </div>
         ) : sessions.length === 0 ? (
           <div className="text-center py-16 border border-border bg-stone-850">
-            <p className="text-sm text-iron">No sessions logged yet. Start a workout from the dashboard.</p>
+            <p className="text-sm text-cream-dim">No sessions logged yet. Start a workout from the dashboard.</p>
           </div>
         ) : (
           <div className="space-y-2">
@@ -113,7 +113,7 @@ export default function HistoryPage() {
                           </span>
                         )}
                       </div>
-                      <div className="font-mono text-[9px] text-iron mt-0.5">
+                      <div className="font-mono text-[9px] text-cream-dim mt-0.5">
                         {new Date(s.date + 'T12:00:00').toLocaleDateString('en-US', {
                           weekday: 'short',
                           month: 'short',
@@ -121,7 +121,7 @@ export default function HistoryPage() {
                         })}
                       </div>
                     </div>
-                    <span className="font-mono text-iron text-xs">{isExpanded ? '−' : '+'}</span>
+                    <span className="font-mono text-cream-dim text-xs">{isExpanded ? '−' : '+'}</span>
                   </button>
 
                   {isExpanded && details && (
@@ -144,13 +144,13 @@ export default function HistoryPage() {
                               {exLogs
                                 .sort((a, b) => a.set_number - b.set_number)
                                 .map((log) => (
-                                  <div key={log.id} className="flex gap-2 font-mono text-[10px] text-iron">
+                                  <div key={log.id} className="flex gap-2 font-mono text-[10px] text-cream-dim">
                                     <span className="w-6">S{log.set_number}</span>
                                     <span className="text-cream">{log.weight_lbs ?? '—'}lbs</span>
                                     <span>×</span>
                                     <span className="text-cream">{log.reps ?? '—'}</span>
                                     {log.rir != null && <span className="text-gold-dim">@{log.rir}RIR</span>}
-                                    {log.notes && <span className="text-iron">— {log.notes}</span>}
+                                    {log.notes && <span className="text-cream-dim">— {log.notes}</span>}
                                   </div>
                                 ))}
                               {exNote?.notes && (

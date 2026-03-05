@@ -242,7 +242,7 @@ export default function DashboardPage() {
                         : tag.includes('LEG') || tag.includes('COMBAT') ? 'tag-legs'
                         : tag.includes('REST') ? 'tag-rest'
                         : i === 2 ? 'tag-gold'
-                        : 'border-border text-iron bg-stone-900'
+                        : 'border-border-light text-cream-dim bg-stone-900'
                       }
                     `}
                   >
@@ -346,7 +346,7 @@ export default function DashboardPage() {
                       </span>
                       <div className="flex-1 h-px bg-gradient-to-r from-border-light to-transparent" />
                       {section.range && (
-                        <span className="font-mono text-[9px] text-iron">{section.range}</span>
+                        <span className="font-mono text-[9px] text-cream-dim">{section.range}</span>
                       )}
                     </div>
 

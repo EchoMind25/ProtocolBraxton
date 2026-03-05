@@ -63,7 +63,7 @@ export default function ChatInterface() {
             <h2 className="font-display text-sm tracking-[4px] text-cream-dim uppercase mb-2">
               Protocol Assistant
             </h2>
-            <p className="text-sm text-iron max-w-md mx-auto">
+            <p className="text-sm text-cream-dim max-w-md mx-auto">
               Ask about your program, get form advice, discuss programming changes, or analyze your training data.
               Claude has access to your full training history and program definition.
             </p>
@@ -77,7 +77,7 @@ export default function ChatInterface() {
                 <button
                   key={prompt}
                   onClick={() => setInput(prompt)}
-                  className="font-mono text-[9px] tracking-[1px] text-iron border border-border px-3 py-1.5 hover:text-cream-dim hover:border-border-light transition-colors"
+                  className="font-mono text-[9px] tracking-[1px] text-cream-dim border border-border px-3 py-1.5 hover:text-cream hover:border-border-light transition-colors"
                 >
                   {prompt}
                 </button>

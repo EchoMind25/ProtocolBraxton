@@ -30,7 +30,7 @@ export default function ExerciseCard({ exercise, index, setLogs = [], exerciseNo
           <h3 className="font-display text-[13px] font-semibold tracking-[1.5px] text-cream uppercase leading-tight">
             {exercise.name}
           </h3>
-          <p className="font-mono text-[8px] tracking-[1px] text-iron mt-1 uppercase">
+          <p className="font-mono text-[8px] tracking-[1px] text-cream-dim mt-1 uppercase">
             {exercise.targets}
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function ExerciseCard({ exercise, index, setLogs = [], exerciseNo
           {Array.from({ length: prescribedSets }).map((_, i) => (
             <div
               key={i}
-              className={`w-1.5 h-1.5 rounded-full ${i < setsLogged ? 'bg-gold' : 'bg-border'}`}
+              className={`w-1.5 h-1.5 rounded-full ${i < setsLogged ? 'bg-gold' : 'bg-border-light'}`}
             />
           ))}
         </div>
@@ -91,7 +91,7 @@ export default function ExerciseCard({ exercise, index, setLogs = [], exerciseNo
                 href={`https://www.youtube.com/results?search_query=${exercise.youtube_query}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 font-mono text-[8px] tracking-[2px] text-iron hover:text-cream border border-border px-2.5 py-1.5 transition-colors uppercase"
+                className="inline-flex items-center gap-1.5 font-mono text-[8px] tracking-[2px] text-cream-dim hover:text-cream border border-border-light px-2.5 py-1.5 transition-colors uppercase"
               >
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="#e62b2b">
                   <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
@@ -104,7 +104,7 @@ export default function ExerciseCard({ exercise, index, setLogs = [], exerciseNo
           {/* Set logging area */}
           {isLogging && (
             <div className="border-t border-border px-4 py-3">
-              <div className="font-mono text-[8px] tracking-[2px] text-iron uppercase mb-2">
+              <div className="font-mono text-[8px] tracking-[2px] text-cream-dim uppercase mb-2">
                 Log Sets
               </div>
 
@@ -115,11 +115,11 @@ export default function ExerciseCard({ exercise, index, setLogs = [], exerciseNo
                     .sort((a, b) => a.set_number - b.set_number)
                     .map((set) => (
                       <div key={set.id} className="flex items-center gap-2 font-mono text-xs text-cream-dim">
-                        <span className="text-iron w-8">S{set.set_number}</span>
+                        <span className="text-cream-dim w-8">S{set.set_number}</span>
                         <span>{set.weight_lbs ?? '—'}lbs</span>
-                        <span className="text-iron">×</span>
+                        <span className="text-cream-dim">×</span>
                         <span>{set.reps ?? '—'}</span>
-                        {set.rir != null && <span className="text-gold-dim">@{set.rir}RIR</span>}
+                        {set.rir != null && <span className="text-gold">@{set.rir}RIR</span>}
                         {set.notes && <span className="text-iron truncate">— {set.notes}</span>}
                       </div>
                     ))}
@@ -191,9 +191,9 @@ function SetForm({ setNumber, exercise, onSubmit }) {
 
   return (
     <div className="flex items-end gap-2 flex-wrap">
-      <span className="font-mono text-[10px] text-iron mb-2 w-8">S{setNumber}</span>
+      <span className="font-mono text-[10px] text-cream-dim mb-2 w-8">S{setNumber}</span>
       <div>
-        <label className="block font-mono text-[7px] text-iron tracking-[1px] mb-0.5">LBS</label>
+        <label className="block font-mono text-[7px] text-cream-dim tracking-[1px] mb-0.5">LBS</label>
         <input
           type="number"
           value={weight}
@@ -203,7 +203,7 @@ function SetForm({ setNumber, exercise, onSubmit }) {
         />
       </div>
       <div>
-        <label className="block font-mono text-[7px] text-iron tracking-[1px] mb-0.5">REPS</label>
+        <label className="block font-mono text-[7px] text-cream-dim tracking-[1px] mb-0.5">REPS</label>
         <input
           type="number"
           value={reps}
@@ -213,7 +213,7 @@ function SetForm({ setNumber, exercise, onSubmit }) {
         />
       </div>
       <div>
-        <label className="block font-mono text-[7px] text-iron tracking-[1px] mb-0.5">RIR</label>
+        <label className="block font-mono text-[7px] text-cream-dim tracking-[1px] mb-0.5">RIR</label>
         <input
           type="number"
           value={rir}
@@ -225,7 +225,7 @@ function SetForm({ setNumber, exercise, onSubmit }) {
         />
       </div>
       <div className="flex-1 min-w-[80px]">
-        <label className="block font-mono text-[7px] text-iron tracking-[1px] mb-0.5">NOTE</label>
+        <label className="block font-mono text-[7px] text-cream-dim tracking-[1px] mb-0.5">NOTE</label>
         <input
           type="text"
           value={notes}
